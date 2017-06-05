@@ -8,7 +8,7 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class TestComponentComponent implements OnInit {
 
-@Input() parameter : string;
+@Input() item : string;
 
   constructor() { }
 

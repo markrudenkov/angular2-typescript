@@ -6,14 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = ['apmAPp'];
+  itemList = ['default first Item'];
 
-
- onClickMe() : void {
-  console.log('buton enabled');
-}
-
-  
+ onClickMe(input1 : string) : void {
+  this.itemList.push(input1);
+}  
 }
 
 

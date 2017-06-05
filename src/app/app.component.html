@@ -3,9 +3,11 @@
     Welcome to {{title}}!!
   </h1>
 
-<input class="form-control" id="instanceText"
-                       ng-model="formModel" placeholder="4" >
-<button (click)="onClickMe()">Click me!</button>
-
-  <app-test-component [parameter]="title" (click)="onClick()"></app-test-component>
+<input #input1 >
+<button (click)="onClickMe(input1.value)">Go</button>
+<ul>
+  <app-test-component *ngFor="let item of itemList"
+   [item]="item">
+    </app-test-component>
+</ul>    
 </div>
