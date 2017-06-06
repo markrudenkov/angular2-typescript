@@ -2,12 +2,25 @@
   <h1>
     Welcome to {{title}}!!
   </h1>
+<input  type="text"
+       required minlength="4" class="form-control"
 
-<input #input1 >
-<button (click)="onClickMe(input1.value)">Go</button>
+
+        #input1>
+
+
+  <button (click)="onClickMe(input1.value)">Go</button>
 <ul>
   <app-test-component *ngFor="let item of itemList"
    [item]="item">
     </app-test-component>
-</ul>    
+</ul>
 </div>
+
+<textarea [value]="data | json"></textarea>
+
+<pre>
+  {{data|json}}
+</pre>
+
+
