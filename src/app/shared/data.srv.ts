@@ -13,4 +13,9 @@ export class DService{
   getData() {
     return this.http.get('https://jsonplaceholder.typicode.com/posts').map((res:Response)=>res.json());
   }
+
+  getComments(postID){
+    return this.http.get('https://jsonplaceholder.typicode.com/posts/'+
+      postID+'/comments').map((res:Response)=>res.json());
+  }
 }

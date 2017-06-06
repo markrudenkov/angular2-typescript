@@ -5,12 +5,14 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { TestComponentComponent } from './test-component/test-component.component';
 import {DService} from './shared/data.srv';
+import { PostComponent } from './post/post.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponentComponent,
+    PostComponent,
 
   ],
   imports: [

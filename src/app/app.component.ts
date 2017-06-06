@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import {Component} from '@angular/core';
+import {NgForm} from '@angular/forms';
 import {DService} from './shared/data.srv';
 
 @Component({
@@ -9,17 +9,16 @@ import {DService} from './shared/data.srv';
 })
 export class AppComponent {
   itemList = ['default first Item'];
-  data:any;
+  data: any;
 
-   constructor (private ds : DService){
-     console.log(this.ds.getData().subscribe(data=>this.data=data));
-   }
+  constructor(private ds: DService) {
+    console.log(this.ds.getData().subscribe(data => this.data = data));
+  }
 
+  onClickMe(input1: string): void {
+    this.itemList.push(input1);
+  }
 
-
- onClickMe(input1 : string) : void {
-  this.itemList.push(input1);
-}
 }
 
 
