@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TestComponentComponent } from './test-component/test-component.component';
 import {DService} from './shared/data.srv';
 import { PostComponent } from './post/post.component';
+import { CommentComponent } from './comment/comment.component';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { PostComponent } from './post/post.component';
     AppComponent,
     TestComponentComponent,
     PostComponent,
+    CommentComponent,
 
   ],
   imports: [

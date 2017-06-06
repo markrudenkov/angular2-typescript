@@ -10,12 +10,12 @@ import {isUndefined} from "util";
 })
 export class PostComponent implements OnInit {
 
-  comments : any;
+  comments: any;
 
-  @Input() post : any;
+  @Input() post: any;
 
-  constructor(private _ds: DService) { }
-
+  constructor(private _ds: DService) {
+  }
 
   get_ds(): DService {
     return this._ds;
@@ -24,8 +24,9 @@ export class PostComponent implements OnInit {
   ngOnInit() {
   }
 
-  getComments(commentId){
-    this._ds.getComments(commentId).subscribe(data=> {this.comments = data});
+  getComments(commentId) {
+    this._ds.getComments(commentId).subscribe(data => {
+      this.comments = data
+    });
   }
-
 }
