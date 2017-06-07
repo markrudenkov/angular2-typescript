@@ -15,7 +15,18 @@ export class DService {
   }
 
   getComments(postID) {
-    return this.http.get('https://jsonplaceholder.typicode.com/posts/' +
-      postID + '/comments').map((res: Response) => res.json());
+    return this.http.get(`https://jsonplaceholder.typicode.com/posts/
+      ${postID} /comments`).map((res: Response) => res.json());
   }
+
+  getDataFromLocalHost() {
+    return this.http.get('http://localhost:3000/posts').map((res: Response) => res.json());
+  }
+
+  getCommentsLocalHost(postID) {
+    return this.http.get(`http://localhost:3000/comments/
+      ${postID} `).map((res: Response) => res.json());
+  }
+
+
 }

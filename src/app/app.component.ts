@@ -12,7 +12,7 @@ export class AppComponent {
   data: any;
 
   constructor(private ds: DService) {
-    console.log(this.ds.getData().subscribe(data => this.data = data));
+    console.log(this.ds.getDataFromLocalHost().subscribe(data => this.data = data));
   }
 
   onClickMe(input1: string): void {

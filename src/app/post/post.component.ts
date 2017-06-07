@@ -24,8 +24,8 @@ export class PostComponent implements OnInit {
   ngOnInit() {
   }
 
-  getComments(commentId) {
-    this._ds.getComments(commentId).subscribe(data => {
+  getComments(postId) {
+    this._ds.getCommentsLocalHost(postId).subscribe(data => {
       this.comments = data
     });
   }
